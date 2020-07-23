@@ -10,4 +10,6 @@ form.addEventListener('submit', (e) => {
 
     const stringy = JSON.stringify(user);
     localStorage.setItem('USER', stringy);
+
+    window.location = './map';
 });
