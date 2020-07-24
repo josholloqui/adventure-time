@@ -23,7 +23,7 @@ if (completedQuest === quests.length) {
     alert(`Wow, you have completed your adventure! You ended up with this much gold ${user.gold}`);
 }
 
-const section = document.querySelector('section');
+const div = document.querySelector('div');
 
 for (let i = 0; i < quests.length; i++) {
     const quest = quests[i];
@@ -32,13 +32,14 @@ for (let i = 0; i < quests.length; i++) {
         const span = document.createElement('span');
         span.textContent = quests.title;
         span.style.textDecoration = 'strikethrough';
-        section.append(span);
+        div.append(span);
     } else {
         const link = document.createElement('a');
         link.textContent = quest.title;
+        link.classList = quest.id;
         link.href = '/quest/?id=' + quest.id;
 
-        section.append(link);
+        div.append(link);
     }
     
 }

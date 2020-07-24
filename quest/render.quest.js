@@ -51,9 +51,13 @@ export function renderQuest(quest) {
 
         const showResults = document.querySelector('#result');
         showResults.textContent = results.result;
+        const resultImage = document.createElement('img');
+        resultImage.src = results.img;
+        showResults.append(resultImage);
 
         const onwardButton = document.querySelector('#onward');
         onwardButton.classList.remove('hidden');
+        section.classList = 'hidden';
     });
     
     form.append(button);

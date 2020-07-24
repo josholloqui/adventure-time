@@ -1,100 +1,93 @@
 const monsters = {
     id: 'monsters',
-    title: 'A Den of Monsters',
+    title: 'The Ooozers in the Bad Lands',
     map: {
         top: '89%',
         left: '44%'
     },
-    image: 'http://www.placekitten.com/200/200',
+    image: '../assets/OozeMosters.png',
     description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
+        While traversing the Bad Lands, you encounter what you thought was a wicked dance party, but you realize that it is not a party but a MOB OF OOZERS feasting on the BEAT! 
     `,
     choices: [{
         id: 'negotiate',
-        description: 'Negotiate with them',
+        description: 'Try and Take the Brief Case',
         result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
+            The Oozers take notice immediately. Now you have done it, they are furious everything they hold near and dear is in that brief case! They mob  you and since you were unprepared to fight you get bitten and become a Ooozer your self for the rest of your life! 
         `,
-        hp: 0,
-        gold: 35
+        img: '../assets/original.jpg',
+        hp: -35,
+        gold: 0
     }, {
         id: 'fight',
         description: 'Fiiiiiggghhhttt!',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
+            You launch yourself at the Ooozers using your sword, and little do you know hwo truly outnumbered you are. You begin regret the decision, but you persevere! You end up heavily damaged with some gold for your troubles. Oh by the way it's okay to cry about your boo boos. Awhhhhh...
         `,
+        img: '../assets/afterfight.jpeg',
         hp: -30,
         gold: 50
     }, {
         id: 'run',
-        description: 'Run away like good Sir Robin',
+        description: `Pretend like you didn't see them...`,
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            The Oozer were too busy dancing that they didn't mind that you ran away. As you're running away you realize you've been running for hours and you don't realize how tired you are. 
         `,
-        hp: -50,
+        img: '../assets/finnrun.gif',
+        hp: -10,
         gold: 0
+    }, {
+        id: 'dance',
+        description: `Try and Join the Dance Party`,
+        result: `
+            As you join the dance party the Oozers take notice of your surprisingly good dance moves. They create a dance circle around you, and.. you.. IMPRESS them so much that they can't help, but throw gold at you!
+        `,
+        img: '../assets/jake-dance.gif',
+        hp: 0,
+        gold: 100
     }]
 };
 
 const dragon = {
     id: 'dragon',
-    title: 'A Problem Dragon',
+    title: 'The Mysterious Snow Golem',
     map: {
         top: '57%',
         left: '67%'
     },
-    image: 'http://www.placekitten.com/200/200',
+    image: '../assets/snowgolem.jpg',
     audio: 'dragon.wav',
     action: 'dragon-growl.aiff',
     description: `
-        You travel to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        While traveling to the Ice Kingdom you see from afar a Snow Golem that appears to be carrying a Fire Wolf pup on a stick. You're super curious on what going on, but will you do something about that curiosity?
     `,
     choices: [{
         id: 'run',
-        description: 'Get the hell out of the village',
+        description: `Try and ask the Snow Golem what's going on?`,
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            You try to communicate with the Snow Golem, but you realize that there's a language barrier. You keep trying to talk to them, and they frantically try to communicate with you. The Snow Golem gets angry and throws a snow ball at you, and leaves. 
         `,
-        hp: -35,
-        gold: 35
-    }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
-        `,
-        hp: -45,
+        img: '../assets/snowball.png',
+        hp: -5,
         gold: 0
     }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        id: 'fight',
+        description: 'Offer to take the Fire Wolf pup off their hands',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            You successfully attempt to extend the offer of taking the Fire Wolf off their hands. The Snow Golem is so alighted that he hands you a snowball. In your confusion you realize as the snow ball melts it reveals an amount of gold.
         `,
+        img: '../assets/firepup.png',
         hp: 0,
-        gold: 90
+        gold: 35
+    }, {
+        id: 'archer',
+        description: 'Mind your own business and continue traveling to the Ice Kingdom',
+        result: `
+            You decide to just keep heading to the Ice Kingdom. On your way to the Ice Kingdom you being to wonder what the Snow Golem and the Fire Wolf pup are up to now. Well let me tell you... The Snow Golem kept trying to get rid of the pup, but the pup just kept coming back. The pup saw them as their parent. Eventually the Snow Golem broke down giving the pup the attention that the pup wanted. To the surprise to everyone who might here about this tale someday the Golem and pup became real close. They became family, and lived happily ever after. <3
+        `,
+        img: '../assets/firesnow.jpeg',
+        hp: 0,
+        gold: 0
     }]
 };
 
