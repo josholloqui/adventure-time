@@ -20,48 +20,49 @@
     </header>
     <main>  
         <form>
-            <div>
-                <h3>Welcome to the Adventure of your Lifetime</h3>
-                <p>
+            <div class="intro">
+                <h3 class="welcome">Welcome to the Adventure of a Lifetime</h3>
+                <p class="welcome-p">
                     This adventure found you. It knew that you needed something of great importance to enter you life. Little do you know that this expedition that you're about to embark on will test you in ways you never thought imaginable. We think that everything happens for a reason, and this opportunity is just luck it is fate. Now, go forth! Your destiny awaits you!
                 </p>
             </div>
-            <div>
-                <h3>Enter Your Name Warrior!</h3>
+            <div class="username">
+                <h3>Enter Your Name Adventurer!</h3>
                 <label>
                     <input type="text" name="name"/>
                 </label>
             </div>
+            <h3>Choose your Character</h3>
             <div class="choose">
                 <label>
                     Finn the Human
-                    <input type="radio" value="finn" name="class">
-                    <img class="image-input" src="./assets/icons8-finn-500-2.png" height="200px" width="200px"/>
+                    <input class="hide-input" type="radio" value="finn" name="class">
+                    <img class="image-input top" src="./assets/icons8-finn-500-2.png" height="200px" width="200px"/>
                 </label>
                 <label>
                     Jake the Dog
-                    <input type="radio" value="jake" name="class">
-                    <img class="image-input" src="./assets/icons8-jake-500.png" height="200px" width="200px"/>
+                    <input class="hide-input" type="radio" value="jake" name="class">
+                    <img class="image-input top" src="./assets/icons8-jake-500.png" height="200px" width="200px"/>
                 </label>
                 <label>
                     Lumpy Space Princess
-                    <input type="radio" value="lsp" name="class">
-                    <img class="image-input" src="./assets/icons8-lumpy-space-princess-500.png" height="200px" width="200px"/>
+                    <input class="hide-input" type="radio" value="lsp" name="class">
+                    <img class="image-input top" src="./assets/icons8-lumpy-space-princess-500.png" height="200px" width="200px"/>
                 </label>
                 <label>
                     Ice King
-                    <input type="radio" value="iceking" name="class">
-                    <img class="image-input" src="./assets/icons8-ice-king-500.png" height="200px" width="200px"/>
+                    <input class="hide-input" type="radio" value="iceking" name="class">
+                    <img class="image-input bottom" src="./assets/icons8-ice-king-500.png" height="200px" width="200px"/>
                 </label>
                 <label>
                     BMO
-                    <input type="radio" value="bmo" name="class">
-                    <img class="image-input" src="./assets/icons8-bmo-500.png" height="200px" width="200px"/>
+                    <input class="hide-input" type="radio" value="bmo" name="class">
+                    <img class="image-input bottom" src="./assets/icons8-bmo-500.png" height="200px" width="200px"/>
                 </label>
                 <label>
                     Princess Bubblegum
-                    <input type="radio" value="pb" name="class">
-                    <img class="image-input" src="./assets/icons8-princess-bubblegum-500.png" height="200px" width="200px"/>
+                    <input class="hide-input" type="radio" value="pb" name="class">
+                    <img class="image-input bottom" src="./assets/icons8-princess-bubblegum-500.png" height="200px" width="200px"/>
                 </label>
             </div>
             <button>Submit</button>

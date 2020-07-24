@@ -31,7 +31,7 @@ main {
 form {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-rows: 1fr .25fr 2fr .25fr .5fr;
     width: 1000px;
     max-width: 80%;
     justify-items: center;
@@ -40,13 +40,48 @@ form {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h3 {
+    font-size: 38px;
+}
+
+p {
+    font-size: 20px;
+    border: 36px solid orange;
+    border-image-slice:383 0 474 67;border-image-width: 30px 30px 30px 30px;border-image-outset:13px 13px 13px 13px;border-image-repeat:repeat repeat;border-image-source:url("https://i.imgur.com/4hEKZJ3.png");
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.username {
+    grid-row-start: 4;
+    border: 36px solid orange;
+    border-image-slice:1370 0 1370 0;border-image-width:20px 20px 20px 20px;border-image-outset:0px 0px 0px 0px;border-image-repeat:round stretch;border-image-source:url("https://bit.ly/2WTgTk6");
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -100px;
+}
+
+input {
+    height: 40px;
 }
 
 .choose {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    justify-items: center;
 }
 
 label {
@@ -55,11 +90,11 @@ label {
     text-align: center;
 }
 
-input {
+.hide-input {
     display: none;
 }
 
-input:checked + img {
+.hide-input:checked + img {
     border: solid yellow;
     opacity: 0.5;
 }
@@ -129,4 +164,23 @@ footer {
 
   .hidden {
     display: none;
+}
+
+button {
+    height: 65px;
+    width: 150px;
+    font-family: eskapade-fraktur,serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:hover {
+    height: 80px;
+    width: 180px;
+    font-size: 32px;
+    background-color: black;
+    color: whitesmoke;
 }
