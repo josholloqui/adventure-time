@@ -93,32 +93,30 @@ const dragon = {
 
 const treasure = {
     id: 'treasure',
-    title: 'The Golden Treasure',
+    title: 'Cosmic Reality of Possibilities',
     map: {
         top: '31%',
         left: '5%'
     },
-    image: 'http://www.placekitten.com/200/200',
+    image: '../assets/prismo.png',
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        While traversing the mountains you decide to take a rest. While you're sleeping you get visited by a Cosmic Owl in your dream. This snatches you and take you to the Cosmic Realm. In the Cosmic Realm you meet Prismo a very friendly wish master. He proceeds to tell you that you get one wish. This wish will send you to an alternate universe where to get to live this wish. What will you wish for?
     `,
     choices: [{
         id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
-        hp: 0,
-        gold: 40
+        description: 'Wish for riches',
+        result: `You tell Prismo that you wish for riches, his reply 'Wow.. So original...' He proceeds to grant you your wish. You end up with massive amounts of wealth, but you know how they say money doesn't buy happiness, well this is the case here you come to realize that deep down your feeling down. Even though on the outside your facade shows that your dancing with joy, but really you regret it.`,
+        img: '../assets/finngold.gif',
+        hp: -10,
+        gold: 1000000
     }, {
         id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
-        hp: -50,
+        description: 'Wish for Finn cakes',
+        result: `You tell Prismo that you wish for Finn cakes, his reply 'Wow. What are Finn cakes?' You tell him that they are the most delicious cakes in the entire universe. Prismo in shock and enjoyment grants your wish while also providing himself with copious amounts of these cakes. You go on to receive you freshly baked Finn cakes, and end up achieving maximum happiness`,
+        img: '../assets/finncakes.jpeg',
+        hp: 0,
         gold: 0
     }, {
         id: 'jeweled',

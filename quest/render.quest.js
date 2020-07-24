@@ -50,10 +50,11 @@ export function renderQuest(quest) {
         setUser(user); 
 
         const showResults = document.querySelector('#result');
-        showResults.textContent = results.result;
+        const p = document.createElement('p');
+        p.textContent = results.result;
         const resultImage = document.createElement('img');
         resultImage.src = results.img;
-        showResults.append(resultImage);
+        showResults.append(p, resultImage);
 
         const onwardButton = document.querySelector('#onward');
         onwardButton.classList.remove('hidden');

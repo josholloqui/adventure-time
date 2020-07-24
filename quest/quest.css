@@ -19,7 +19,12 @@ body {
 
 main {
     display: flex;
+    background-image: url(../assets/simple-old-paper-1-transparent.jpg);
+    background-size: cover;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(var(--footer-height));
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
