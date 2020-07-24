@@ -18,23 +18,21 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
-    font-family: eskapade-fraktur,serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
+section {
+    background-color: var(--color5);
     width: 1000px;
     max-width: 80%;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
@@ -43,52 +41,12 @@ form {
     border: solid 2px var(--color1);
 }
 
-.choose {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-
-label {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-input {
-    display: none;
-}
-
-input:checked + img {
-    border: solid yellow;
-    opacity: 0.5;
-}
-
-.image-input {
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-
 header {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    background-image: url(../assets/home.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    -webkit-text-stroke: 1px black;
-    font-family: mythos-std, sans-serif; color: #b20000;
-    font-weight: 900;
-    font-style: normal;
-    letter-spacing: 2px;
-}
-
-h1 {
-    font-size: 62px;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    height: var(--header-height);
+    box-shadow: var(--shadow);
 }
 
 footer {
@@ -100,13 +58,19 @@ footer {
 
 
 h2 {
-    font-size: 48px;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
 .gutter-right {
     margin-right: 20px;
 }
+
+header img {
+    height: var(--header-height);
+}
+
+
 
 content {
     width: 80%;
@@ -127,6 +91,16 @@ footer {
     box-shadow: var(--shadow);
 }
 
+  label {
+      display: block;
+  }
+
   .hidden {
     display: none;
+}
+
+img {
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
 }

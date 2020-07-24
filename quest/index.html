@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="./quest.css">
     <title>Document</title>
 </head>
 
@@ -18,24 +17,8 @@
     </header>
     <main>
         <section>
-            <div>A Den of Monsters</div>
-            <img src="http://placekitten.com/300/300"/>
-            <form>
-                <div>You enter the quest chamber one to be confronted by a hoard of monsters. And they look hungry. What do you do?</div>
-                <label>
-                    <div>Negotiate with them</div>
-                    <input type="radio" value="negotiate" name="choices">
-                </label>
-                <label>
-                    <div>Fiiiiiggghhhttt!</div>
-                    <input type="radio" value="fight" name="choices">
-                </label>
-                <label>
-                    <div>Run away like good Sir Robin</div>
-                    <input type="radio" value="run" name="choices">
-                </label>
-                <button>Submit</button>
-            </form>
+            <div id="result"></div>
+            <button id="onward" class="hidden">Back to map</button>
         </section>
     </main>
     <footer>

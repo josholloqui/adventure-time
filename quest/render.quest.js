@@ -1,3 +1,5 @@
+import { getUser, setUser } from '../userUtils.js';
+
 export function renderQuest(quest) {
     const section = document.createElement('section');
 
@@ -30,6 +32,29 @@ export function renderQuest(quest) {
 
     const button = document.createElement('button');
     button.textContent = 'Submit';
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        const choiceId = formData.get('choices');
+        const results = findById(quest.choices, choiceId);
+
+        const user = getUser();
+
+        user.gold += results.gold;
+        user.hp += results.hp;
+        user.completed[quest.id] = true;
+
+        setUser(user); 
+
+        const showResults = document.querySelector('#result');
+        showResults.textContent = results.result;
+
+        const onwardButton = document.querySelector('#onward');
+        onwardButton.classList.remove('hidden');
+    });
     
     form.append(button);
     section.append(div, img, form);
