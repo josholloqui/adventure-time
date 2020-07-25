@@ -8,13 +8,14 @@ body {
     --color5: hsla(170, 28%, 95%, 1);
 
     
-    --header-height: 80px;
+    --header-height: 40px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
-    --gutter: 30px;
+    --gutter: 40px;
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
     background-color: whitesmoke;
+    height: 100%;
 }
 
 main {
@@ -26,13 +27,14 @@ main {
     align-items: center;
     margin-bottom: calc(var(--footer-height));
     justify-content: center;
+    height: 100%;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
 }
 
 div {
-    background-color: var(--color5);
     height: 100%;
+    min-height: 1000px;
     width: 1000px;
     max-width: 100%;
     min-width: 1000px;
@@ -42,30 +44,41 @@ div {
     grid-template-rows: repeat(20, 1fr);
     justify-content: center;
     align-items: center;
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
 }
-
+a {
+    font-family: eskapade-fraktur,serif;
+    font-weight: 400;
+    font-style: normal;
+    color: seashell;
+}
 .monsters {
-    grid-column-start: 11;
-    grid-row-start: 7;
-    position: absolute;
+    grid-column: 10 / span 5;
+    text-align: center;
+    grid-row-start: 14;
     z-index: 1;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: rgb(219, 209, 180, 0.9);
 }
 
 .treasure {
-    grid-column-start: 7;
-    top: 335px;
-    position: absolute;
+    grid-column: 6 / span 5;
+    grid-row-start: 9;
+    text-align: center;
     z-index: 1;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: rgb(24, 98, 24, 0.9);
 }
 
 .dragon {
-    grid-column-start: 13;
-    top: 150px;
-    position: absolute;
+    grid-column: 11 / span 5;
+    grid-row-start: 7;
     z-index: 1;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: rgb(170, 211, 233, 0.9);
 }
 
 img {
@@ -76,6 +89,9 @@ img {
 
 header {
     display: flex;
+    background-image: url('../assets/header2.jpg');
+    background-size: cover;
+    background-position: center;
     justify-content: flex-end;
     background-color: var(--color3);
     height: var(--header-height);
@@ -84,6 +100,9 @@ header {
 
 footer {
     display: flex;
+    background-image: url('../assets/header2.jpg');
+    background-size: cover;
+    background-position: center;
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);

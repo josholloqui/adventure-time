@@ -16,7 +16,7 @@ const monsters = {
             The Oozers take notice immediately. Now you have done it, they are furious everything they hold near and dear is in that brief case! They mob  you and since you were unprepared to fight you get bitten and become a Ooozer your self for the rest of your life! 
         `,
         img: '../assets/original.jpg',
-        hp: -35,
+        hp: -50,
         gold: 0
     }, {
         id: 'fight',
@@ -120,9 +120,17 @@ const treasure = {
         gold: 0
     }, {
         id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
-        hp: 35,
+        description: 'Wish for a Horse',
+        result: `You tell Prismo that you wish for a horse, his reply 'Wow. Okay well here's a horse I guess?' He then grants your wish, but you notice immediately that something is off about this horse... OH NO! He ended up giving you a Poo Brain Horse! Well good luck with that...`,
+        img: '../assets/poobrain.jpg',
+        hp: -10,
+        gold: 0
+    }, {
+        id: 'sandwich',
+        description: 'Wish for a Sandwich...',
+        result: `You tell Prismo that you wish for sandwich since you're really hungry right now, his reply 'Wow. You know you could wish for anything like truly anything you know? But alright here your sandwich I guess? You receive your sandwich while chowing down you realize that you could have wished for anything, and boom you realize your mistake...Luckily for you Prismo offers you some of his homemade pickles so it's no that bad.'`,
+        img: '../assets/sandwich.jpeg',
+        hp: 10,
         gold: 0
     }]
 };
